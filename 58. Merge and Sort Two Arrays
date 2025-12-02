@@ -1,0 +1,42 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int arr1[]=new int[a];
+        int arr2[]=new int[b];
+        for(int i=0;i<a;i++)
+        {
+            arr1[i]=sc.nextInt();
+        }
+        for(int j=0;j<b;j++)
+        {
+            arr2[j]=sc.nextInt();
+        }
+        int len=a+b;
+        int arr3[]=new int[len];
+        int k=0;
+        
+        for(int i=0;i<a;i++)
+        {
+            arr3[k++]=arr1[i];
+        }
+        for(int i=0;i<b;i++)
+        {
+            arr3[k++]=arr2[i];
+        }
+        Arrays.sort(arr3);
+        boolean f=true;
+        for(int i=0;i<len;i++)
+        {
+            if(!f){
+                System.out.print(" ");
+            }
+            f=false;
+            System.out.print(arr3[i]);
+        }
+        
+        
+    }
+}
