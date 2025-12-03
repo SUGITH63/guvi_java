@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.next();
+        StringBuilder sb=new StringBuilder();
+        char[]c=s.toCharArray();
+        for(int i=0;i<s.length();i++)
+        {
+            if(c[i]!='a'&& c[i]!='e'&& c[i]!='i'&& c[i]!='o'&& c[i]!='u'){
+                sb.append(c[i]);
+            }
+        }
+        if(sb.length()==0){
+             System.out.print("-1");
+        }else{
+        System.out.print(sb.reverse());
+        }
+    }
+}
