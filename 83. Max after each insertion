@@ -1,0 +1,34 @@
+import java.util.*;
+public class Main {
+    public static int maxy(int arr[]){
+        int max=arr[0];
+        int len=arr.length;
+        for(int i=0;i<len;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }return max;
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        int arr[]=new int[n+m];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }boolean f=true;
+        for(int i=n;i<n+m;i++)
+        {
+            arr[i]=sc.nextInt();
+            int m1=maxy(arr);
+             
+        if(!f){
+            System.out.print(" ");
+        }
+        System.out.print(m1);
+        f=false;
+        }
+        
+    }
+}
